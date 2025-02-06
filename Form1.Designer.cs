@@ -54,7 +54,7 @@ partial class Form1
                 else{
                     b.Size = new Size(50, 50);
                     b.Location = new Point(50*linha, 50*coluna);
-                    b.BackColor = Color.Gray;
+                    b.BackColor = Color.Black;
                     matriz[linha,coluna] = b;
                 }
                 this.Controls.Add(b);

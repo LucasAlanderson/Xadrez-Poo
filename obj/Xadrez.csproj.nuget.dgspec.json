@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\20231170150047\\Downloads\\Xadrez\\Xadrez.csproj": {}
+    "D:\\Users\\20231170150049\\Xadrez-Poo\\Xadrez.csproj": {}
   },
   "projects": {
-    "D:\\Users\\20231170150047\\Downloads\\Xadrez\\Xadrez.csproj": {
+    "D:\\Users\\20231170150049\\Xadrez-Poo\\Xadrez.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\20231170150047\\Downloads\\Xadrez\\Xadrez.csproj",
+        "projectUniqueName": "D:\\Users\\20231170150049\\Xadrez-Poo\\Xadrez.csproj",
         "projectName": "Xadrez",
-        "projectPath": "D:\\Users\\20231170150047\\Downloads\\Xadrez\\Xadrez.csproj",
-        "packagesPath": "D:\\Users\\20231170150047\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\20231170150047\\Downloads\\Xadrez\\obj\\",
+        "projectPath": "D:\\Users\\20231170150049\\Xadrez-Poo\\Xadrez.csproj",
+        "packagesPath": "D:\\Users\\20231170150049\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\20231170150049\\Xadrez-Poo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "D:\\Users\\20231170150047\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Users\\20231170150049\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
