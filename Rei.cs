@@ -10,4 +10,8 @@ using System.Threading.Tasks;
        public Rei (string Cor, int Linha, int Coluna) : base (Cor, Linha, Coluna){
         movimentou = false;
        }
+       public override bool MovimentoValido(int LinhaDestino, int ColunaDestino) {
+        
+        return false;
+       }
     }

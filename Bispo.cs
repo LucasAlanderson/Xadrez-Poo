@@ -16,4 +16,5 @@ using System.Threading.Tasks;
 
         return difLinha == difColuna;
     }
+    public Bispo(string cor, int linha, int coluna) : base(cor, linha, coluna) { }
     }

@@ -1,4 +1,6 @@
-﻿namespace Xadrez;
+﻿using System.Diagnostics;
+
+namespace Xadrez;
 
 partial class Form1
 {
@@ -6,9 +8,10 @@ partial class Form1
     ///  Required designer variable.
     /// </summary>
     private System.ComponentModel.IContainer components = null;
-  
+
     private const int TamanhoDaMatriz = 8;
     private Button[,] matriz = new Button[TamanhoDaMatriz, TamanhoDaMatriz];
+    private Tabuleiro tb = new Tabuleiro();
 
     /// <summary>
     ///  Clean up any resources being used.
@@ -35,14 +38,17 @@ partial class Form1
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(800, 450);
         this.Text = "Xadrez";
-        for(int linha = 0; linha < TamanhoDaMatriz; linha++){
-            for(int coluna = 0; coluna <TamanhoDaMatriz; coluna++){
+        for (int linha = 0; linha < TamanhoDaMatriz; linha++)
+        {
+            for (int coluna = 0; coluna < TamanhoDaMatriz; coluna++)
+            {
                 Button b = new Button();
-                if((coluna + linha)%2 == 0) {
+                if ((coluna + linha) % 2 == 0)
+                {
                     b.Size = new Size(50, 50);
-                    b.Location = new Point(50*linha, 50*coluna);
+                    b.Location = new Point(50 * linha, 50 * coluna);
                     b.BackColor = Color.White;
-                    matriz[linha,coluna] = b;
+                    matriz[linha, coluna] = b;
                     this.Controls.Add(b);
                 }
                 // }else if(linha + coluna == ) {
@@ -51,16 +57,18 @@ partial class Form1
                 //     b.BackColor = Color.Gray;
                 //     matriz[linha,coluna] = b;
                 // }
-                else{
+                else
+                {
                     b.Size = new Size(50, 50);
-                    b.Location = new Point(50*linha, 50*coluna);
+                    b.Location = new Point(50 * linha, 50 * coluna);
                     b.BackColor = Color.Black;
-                    matriz[linha,coluna] = b;
+                    matriz[linha, coluna] = b;
                 }
                 this.Controls.Add(b);
             }
-    }
+            tb.InicializarTabuleiro();
+        }
 
-    #endregion
-}
+        #endregion
+    }
 }
