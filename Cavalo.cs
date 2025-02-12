@@ -18,6 +18,18 @@ using System.Threading.Tasks;
         return (difLinha == 2 && difColuna == 1) || (difLinha == 1 && difColuna == 2); 
         }
 
-        public Cavalo(string cor, int linha, int coluna): base(cor, linha, coluna){}
+        public Cavalo(string cor, int linha, int coluna): base(cor, linha, coluna){
+            /*try
+            {
+                string path = Path.Combine(Application.StartupPath, "imagens", "cavalo_branco.png");
+                MessageBox.Show("Tentando carregar: " + path);
+                cavalo_branco.image = Image.FromFile(path);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
+            }
+            this.Controls.Add(cavalo);*/
+        }
 
     }

@@ -38,6 +38,25 @@ partial class Form1
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(800, 450);
         this.Text = "Xadrez";
+
+        PictureBox cavalo = new PictureBox();
+        cavalo.Location = new Point(50,50);
+        cavalo.Size = new Size(50,50);
+        cavalo.SizeMode = PictureBoxSizeMode.StretchImage;
+
+         try
+            {
+                string path = Path.Combine(Application.StartupPath, "imagens", "cavalo_branco.png");
+                MessageBox.Show("Tentando carregar: " + path);
+                cavalo.Image = Image.FromFile(path);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
+            }
+            this.Controls.Add(cavalo);
+
+
         for (int linha = 0; linha < TamanhoDaMatriz; linha++)
         {
             for (int coluna = 0; coluna < TamanhoDaMatriz; coluna++)
@@ -51,12 +70,6 @@ partial class Form1
                     matriz[linha, coluna] = b;
                     this.Controls.Add(b);
                 }
-                // }else if(linha + coluna == ) {
-                //     b.Size = new Size(50, 50);
-                //     b.Location = new Point(50*linha, 50*coluna);
-                //     b.BackColor = Color.Gray;
-                //     matriz[linha,coluna] = b;
-                // }
                 else
                 {
                     b.Size = new Size(50, 50);
