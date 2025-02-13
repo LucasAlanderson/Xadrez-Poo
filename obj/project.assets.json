@@ -8,19 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\gaby_\\.nuget\\packages\\": {}
+    "D:\\Users\\20231170150049\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gaby_\\OneDrive\\Documentos\\github\\Xadrez-Poo\\Xadrez.csproj",
+      "projectUniqueName": "D:\\Users\\20231170150049\\Xadrez-Poo\\Xadrez.csproj",
       "projectName": "Xadrez",
-      "projectPath": "C:\\Users\\gaby_\\OneDrive\\Documentos\\github\\Xadrez-Poo\\Xadrez.csproj",
-      "packagesPath": "C:\\Users\\gaby_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gaby_\\OneDrive\\Documentos\\github\\Xadrez-Poo\\obj\\",
+      "projectPath": "D:\\Users\\20231170150049\\Xadrez-Poo\\Xadrez.csproj",
+      "packagesPath": "D:\\Users\\20231170150049\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\20231170150049\\Xadrez-Poo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gaby_\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "D:\\Users\\20231170150049\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
@@ -38,11 +38,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -67,7 +62,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

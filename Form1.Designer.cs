@@ -39,22 +39,28 @@ partial class Form1
         this.ClientSize = new System.Drawing.Size(800, 450);
         this.Text = "Xadrez";
 
-        PictureBox cavalo = new PictureBox();
-        cavalo.Location = new Point(50,50);
-        cavalo.Size = new Size(50,50);
-        cavalo.SizeMode = PictureBoxSizeMode.StretchImage;
 
-         try
-            {
-                string path = Path.Combine(Application.StartupPath, "imagens", "cavalo_branco.png");
-                MessageBox.Show("Tentando carregar: " + path);
-                cavalo.Image = Image.FromFile(path);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
-            }
-            this.Controls.Add(cavalo);
+        PictureBox cavalo = new PictureBox();
+        cavalo.Location = new Point(50, 50);
+        cavalo.Size = new Size(50, 50);
+        cavalo.SizeMode = PictureBoxSizeMode.StretchImage;
+        PictureBox torre = new PictureBox();
+
+        torre.Location = new Point(50, 50);
+        torre.Size = new Size(50, 50);
+        torre.SizeMode = PictureBoxSizeMode.StretchImage;
+    
+        try
+        {
+            string path = Path.Combine(@"D:\Users\20231170150049\Xadrez-Poo", "bin", "Debug", "imagens", "cavalo_branco.png");
+            MessageBox.Show("Tentando carregar: " + path);
+            cavalo.Image = Image.FromFile(path);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
+        }
+        this.Controls.Add(cavalo);
 
 
         for (int linha = 0; linha < TamanhoDaMatriz; linha++)
