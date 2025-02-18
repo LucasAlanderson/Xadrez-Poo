@@ -40,27 +40,40 @@ partial class Form1
         this.Text = "Xadrez";
 
 
-        PictureBox cavalo = new PictureBox();
-        cavalo.Location = new Point(50, 50);
-        cavalo.Size = new Size(50, 50);
-        cavalo.SizeMode = PictureBoxSizeMode.StretchImage;
+        PictureBox cavalo_preto2 = new PictureBox();
+        cavalo_preto2.Location = new Point(300, 0);
+        cavalo_preto2.Size = new Size(50, 50);
+        cavalo_preto2.SizeMode = PictureBoxSizeMode.StretchImage;
+
+        PictureBox cavalo_preto1 = new PictureBox();
+        cavalo_preto1.Location = new Point(50,0);
+        cavalo_preto1.Size = new Size(50, 50);
+        cavalo_preto1.SizeMode = PictureBoxSizeMode.StretchImage;
+
         PictureBox torre = new PictureBox();
 
-        torre.Location = new Point(50, 50);
+        torre.Location = new Point(350, 50);
         torre.Size = new Size(50, 50);
         torre.SizeMode = PictureBoxSizeMode.StretchImage;
     
         try
         {
-            string path = Path.Combine(@"D:\Users\20231170150049\Xadrez-Poo", "bin", "Debug", "imagens", "cavalo_branco.png");
-            MessageBox.Show("Tentando carregar: " + path);
-            cavalo.Image = Image.FromFile(path);
+            string path_cavalo_preto = Path.Combine(@"D:\Users\20231170150047\Xadrez-Poo", "bin", "Debug", "imagens", "cavalo_preto.png");
+            string path_cavalo_branco = Path.Combine(@"D:\Users\20231170150047\Xadrez-Poo", "bin", "Debug", "imagens", "cavalo_branco.png");
+            MessageBox.Show("Tentando carregar: " + path_cavalo_preto);
+            cavalo_preto2.Image = Image.FromFile(path_cavalo_preto);
+            cavalo_preto2.BackgroundImage = Image.FromFile(path_cavalo_preto);
+            cavalo_preto2.BackgroundImageLayout = ImageLayout.Stretch;
+
+            cavalo_preto1.Image = Image.FromFile(path_cavalo_preto);
+            cavalo_preto1.BackgroundImage = Image.FromFile(path_cavalo_preto);
+            cavalo_preto1.BackgroundImageLayout = ImageLayout.Stretch;
         }
         catch (Exception ex)
         {
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
-        this.Controls.Add(cavalo);
+        this.Controls.Add(cavalo_preto2);
 
 
         for (int linha = 0; linha < TamanhoDaMatriz; linha++)
@@ -80,7 +93,7 @@ partial class Form1
                 {
                     b.Size = new Size(50, 50);
                     b.Location = new Point(50 * linha, 50 * coluna);
-                    b.BackColor = Color.Black;
+                    b.BackColor = Color.Gray;
                     matriz[linha, coluna] = b;
                 }
                 this.Controls.Add(b);

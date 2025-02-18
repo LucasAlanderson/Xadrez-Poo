@@ -32,7 +32,7 @@ public class Cavalo : Pecas
         {
             try
             {
-                string path = Path.Combine(@"D:\Users\20231170150049\Xadrez-Poo", "bin", "Debug", "imagens", "cavalo_branco.png");
+                string path = Path.Combine(@"D:\Users\20231170150047\Xadrez-Poo", "bin", "Debug", "imagens", "cavalo_branco.png");
                 MessageBox.Show("Tentando carregar: " + path);
                 cavalo.Image = Image.FromFile(path);
             }
@@ -45,7 +45,7 @@ public class Cavalo : Pecas
         else {
           try
             {
-                string path = Path.Combine(@"D:\Users\20231170150049\Xadrez-Poo", "bin", "Debug", "imagens", "cavalopreto.png");
+                string path = Path.Combine(@"D:\Users\20231170150047\Xadrez-Poo", "bin", "Debug", "imagens", "cavalo_preto.png");
                 MessageBox.Show("Tentando carregar: " + path);
                 cavalo.Image = Image.FromFile(path);
             }
