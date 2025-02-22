@@ -45,6 +45,5 @@ public class Cavalo : Pecas
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
 
-        // peaoAdversario = new Peao();
     }
 }

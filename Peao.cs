@@ -67,7 +67,6 @@ public class Peao : Pecas
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
 
-        // peaoAdversario = new Peao();
     }
     public Peao() : base() { }
 
