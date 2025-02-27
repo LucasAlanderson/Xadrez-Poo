@@ -12,7 +12,6 @@ partial class Form1 : Form
 
     private const int TamanhoDaMatriz = 8;
     private Button[,] matriz = new Button[TamanhoDaMatriz, TamanhoDaMatriz];
-    private Tabuleiro tb = new Tabuleiro();
 
     /// <summary>
     ///  Clean up any resources being used.
@@ -35,13 +34,20 @@ partial class Form1 : Form
     /// </summary>
     private void InitializeComponent()
     {
+        MessageBox.Show("Tudo certo");
         this.components = new System.ComponentModel.Container();
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(350, 350);
         this.Text = "Xadrez";
         this.AutoSize = true;
 
-        tb.InicializarTabuleiro(this);
+        try{
+            tb.InicializarTabuleiro(this);
+        }catch(Exception e){
+            MessageBox.Show($"Erro ao iniciar {e.Message}\n{e.StackTrace}");
+            Console.WriteLine(e.StackTrace);
+            // throw new InvalidOperationException("Alguma coisa deu muito errado " + e);
+        }
         //this.Load += new System.EventHandler(this.Form1_Load);
         
         for (int linha = 0; linha < TamanhoDaMatriz; linha++)
@@ -53,7 +59,7 @@ partial class Form1 : Form
                 {
                     b.Size = new Size(50, 50);
                     b.Location = new Point(50 * linha, 50 * coluna);
-                    b.BackColor = Color.AntiqueWhite;
+                    b.BackColor = Color.White;
                     matriz[linha, coluna] = b;
                     this.Controls.Add(b);
                 }
@@ -61,7 +67,7 @@ partial class Form1 : Form
                 {
                     b.Size = new Size(50, 50);
                     b.Location = new Point(50 * linha, 50 * coluna);
-                    b.BackColor = Color.Gray;
+                    b.BackColor = Color.Black;
                     matriz[linha, coluna] = b;
                 }
 

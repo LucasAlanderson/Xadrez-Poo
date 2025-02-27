@@ -7,7 +7,7 @@ namespace Xadrez;
 
 public class Rainha : Pecas
 {
-    public PictureBox rainhaImagem { get; private set; }
+    // public PictureBox rainhaImagem { get; private set; }
     public override bool MovimentoValido(int linhaDestino, int colunaDestino)
     {
 
@@ -39,21 +39,21 @@ public class Rainha : Pecas
     }
     public Rainha(string cor, int linha, int coluna) : base(cor, linha, coluna)
     {
-        rainhaImagem = new PictureBox
+        pictureBox = new PictureBox
         {
             Location = new Point(coluna * 50, linha * 50),
-            Size = new Size(45, 45),
+            Size = new Size(48, 48),
             SizeMode = PictureBoxSizeMode.StretchImage,
-            BackColor = Color.Transparent,
             Parent = this,
         };
-
+        
+        pictureBox.BackColor = (linha+coluna)%2==0 ? Color.White : Color.Black;
+        
         try
         {
-            string path = Path.Combine(@"C:\Users\", Environment.UserName, "Xadrez-Poo", "bin", "Debug", "imagens", $"dama_{cor}.png");
-
-            MessageBox.Show("Tentando carregar: " + path);
-            rainhaImagem.Image = Image.FromFile(path);
+            string path = Path.Combine($@"{disk}:\Users\", Environment.UserName, "Xadrez-Poo", "bin", "Debug", "imagens", $"dama_{cor}.png"); // Se estiver dando erro, edite o valor da variável 'disk' para "D"
+            // MessageBox.Show("Tentando carregar: " + path);
+            pictureBox.Image = Image.FromFile(path);
         }
         catch (Exception ex)
         {
