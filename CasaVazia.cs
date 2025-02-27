@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 
 namespace Xadrez;
 
-public class Rei : Pecas
+public class CasaVazia : Pecas
 {
-    // public PictureBox reiImagem { get; private set; }
-    // bool movimentou;
-    public Rei(string cor, int linha, int coluna) : base(cor, linha, coluna)
+    // public PictureBox casaVaziaImagem { get; private set; }
+
+    public CasaVazia() : base() { }
+
+    public CasaVazia(string nome, int linha, int coluna) : base(nome, linha, coluna)
     {
         pictureBox = new PictureBox
         {
@@ -20,10 +22,10 @@ public class Rei : Pecas
         };
 
         pictureBox.BackColor = (linha+coluna)%2==0 ? Color.White : Color.Black;
-
+        
         try
         {
-            string path = Path.Combine($@"{disk}:\Users\", Environment.UserName, "Xadrez-Poo", "bin", "Debug", "imagens", $"rei_{cor}.png"); // Se estiver dando erro, edite o valor da variável 'disk' para "D"
+            string path = Path.Combine($@"{disk}:\Users\", Environment.UserName, "Xadrez-Poo", "bin", "Debug", "imagens", $"{nome}.png"); // Se estiver dando erro, edite o valor da variável 'disk' para "D"
             // MessageBox.Show("Tentando carregar: " + path);
             pictureBox.Image = Image.FromFile(path);
         }
@@ -32,9 +34,9 @@ public class Rei : Pecas
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
     }
+
     public override bool MovimentoValido(int LinhaDestino, int ColunaDestino)
     {
-
-        return false;
+        return true;
     }
 }

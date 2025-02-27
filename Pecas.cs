@@ -11,6 +11,10 @@ public abstract class Pecas : Form
     public int linha;
     public int coluna;
 
+    public PictureBox pictureBox = new PictureBox();
+
+    protected string disk { get; private set; } = "D";
+
     public Pecas(string Cor, int Linha, int Coluna)
     {
         cor = Cor;
